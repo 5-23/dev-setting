@@ -6,7 +6,7 @@ local options = {
     html = { "prettier" },
   },
 
- format_on_save = {
+  format_on_save = {
     timeout_ms = 500,
     lsp_fallback = true,
   },

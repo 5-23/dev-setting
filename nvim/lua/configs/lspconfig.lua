@@ -4,8 +4,18 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- EXAMPLE
-local servers = { "html", "cssls" }
+local servers = { "html", "cssls", "pyright" }
 local nvlsp = require "nvchad.configs.lspconfig"
+
+lspconfig.pyright.setup {
+  settings = {
+    python = {
+      analysis = {
+        diagnosticMode = "openFilesOnly",
+      },
+    },
+  },
+}
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
